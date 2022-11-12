@@ -19,6 +19,8 @@ http://localhost:4000/<ethAddress>
 # Response
 {"address":"0x..","ethBalance":0.0,"numberOfGuardians":0,"ERC20Balances":[]}
 ```
+This back-end uses NestJS TypeScript framework.
+
 The service uses [ethers.js](https://docs.ethers.io/v5/) to:
 - get the address Eth. balance
 - interact with the guardians smart contract and the its number of guardians.
@@ -86,6 +88,14 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+## Lint
+```bash
+# lint
+$ npm run lint
+
+# fix lint
+$ npm run lint:fix
 ```
 
 ## Stay in touch
