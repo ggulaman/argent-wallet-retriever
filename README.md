@@ -1,36 +1,47 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://logovectordl.com/wp-content/uploads/2020/11/argent-xyz-logo-vector.png" width="200" alt="Nest Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+  <p align="center">Back-end service for the wallet retriever web-app</p>
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is the back-end service used by wallet retriever web-app.
+
+When fetching its endpoing with a GET request followed by an Ethereum address, it retrieves the Eth. Balance, the number of Argent Guardians and Balance of its ERC20 tokens:
+```bash
+# GET Request
+http://localhost:4000/<ethAddress>
+
+# Response
+{"address":"0x..","ethBalance":0.0,"numberOfGuardians":0,"ERC20Balances":[]}
+```
 
 ## Installation
-
 ```bash
 $ npm install
 ```
+
+## Set Up
+#### 1. Raname the `.env.example` to `.env`.
+   The service takes the env. variables defined on `./env` in the root directory.
+```bash
+$ mv .env.example .env
+```
+#### 2. Edit `.env` with the variables accordingly, where:
+- #### INFURA_PROVIDER_URL
+  The URL of the INFURA node provider. i.e.: https://mainnet.infura.io/v3/7d0d81d0919f4f05b9ab6634be01ee73
+- #### MORALIS_API_KEY
+  The api key for the Moralis provider. i.e.: d4tVTpoitCXKs5zB7KPS8JAzIxaurwLJeVd3yeqwOIhAYeqCs62ReSN2y5k1EUvw
+- #### WALLET_PRIVATE_KEY
+  Any Ethereum private key.
+- #### MANAGE_GUARDIANS_SC_ADDRESS
+  The SC address of ManageGuardians. i.e.: 0xFF5A7299ff6f0fbAad9b38906b77d08c0FBdc9A7
+- #### MANAGE_GUARDIANS_SC_ABI
+  The ABI of above SC
 
 ## Running the app
 
@@ -43,6 +54,20 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+
+## Steps to Run it Locally
+
+#### 1. Installation
+```bash
+# installation
+$ npm start
+```
+#### 2. Set up the .env file following [Set Up](#set-up)
+#### 3. Running the app
+```bash
+# development
+$ npm run start
 ```
 
 ## Test
@@ -58,16 +83,6 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- Author - [Raul Castillo Lopez](https://www.linkedin.com/in/raulcastillolopez/)
