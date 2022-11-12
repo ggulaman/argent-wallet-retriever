@@ -7,12 +7,11 @@ const INFURA_PROVIDER_URL = "https://mainnet.infura.io/v3/xxxx";
 const MORALIS_API_KEY = "xxxxx";
 const WALLET_PRIVATE_KEY = "xxxxxxxxx";
 const MANAGE_GUARDIANS_SC_ADDRESS = "xxxxxx";
-const MANAGE_GUARDIANS_SC_ABI='[]'
+const MANAGE_GUARDIANS_SC_ABI = "[]";
 const expectedBalance = 1;
 const expectedNumberOfGuardians = 5;
-const PUBLIC_URL="";
-const NODE_ENV="test";
-
+const PUBLIC_URL = "";
+const NODE_ENV = "test";
 
 jest.mock("moralis", () => {
   return {
@@ -91,7 +90,7 @@ describe("AppController", () => {
       MANAGE_GUARDIANS_SC_ADDRESS,
       MANAGE_GUARDIANS_SC_ABI,
       NODE_ENV,
-      PUBLIC_URL
+      PUBLIC_URL,
     };
   });
 
