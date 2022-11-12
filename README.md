@@ -65,11 +65,7 @@ $ npm run start:prod
 
 ## Steps to Run it Locally
 
-#### 1. Installation
-```bash
-# installation
-$ npm start
-```
+#### 1. Install the libraries following [Installation](#installation)
 #### 2. Set up the .env file following [Set Up](#set-up)
 #### 3. Running the app
 ```bash
@@ -89,7 +85,9 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
 ## Lint
+
 ```bash
 # lint
 $ npm run lint
