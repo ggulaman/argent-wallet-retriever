@@ -19,6 +19,11 @@ http://localhost:4000/<ethAddress>
 # Response
 {"address":"0x..","ethBalance":0.0,"numberOfGuardians":0,"ERC20Balances":[]}
 ```
+The service uses [ethers.js](https://docs.ethers.io/v5/) to:
+- get the address Eth. balance
+- interact with the guardians smart contract and the its number of guardians.
+
+It uses [Moralis](https://docs.moralis.io/?utm_source=blog&utm_medium=post&utm_campaign=How%2520to%2520Get%2520NFT%2520and%2520ERC-20%2520Token%2520Balances%2520in%25203%2520Steps) to get the ERC20 token balances.
 
 ## Installation
 ```bash
