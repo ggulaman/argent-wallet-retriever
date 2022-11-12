@@ -31,10 +31,10 @@ $ npm install
 ```
 
 ## Set Up
-#### 1. Raname the `.env.example` to `.env`.
+#### 1. Make a copy of `.env.example` and name it `.env`.
    The service takes the env. variables defined on `./env` in the root directory.
 ```bash
-$ mv .env.example .env
+$ cp .env.example .env
 ```
 #### 2. Edit `.env` with the variables accordingly, where:
 - #### INFURA_PROVIDER_URL
